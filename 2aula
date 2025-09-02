@@ -1,0 +1,17 @@
+<main>
+    <h1>Várias opções e marcas</h1>
+    <div class="Todos modelo NIKE">
+        <div class="175,99">
+            <h2>Todos modelos CAMPUS</h2>
+            <p>155,99</p>
+        </div>
+        <div class="Modelo infantil">
+            <h2> masc/fem 100,00</h2>
+            <p>Várias marcas!-</p>
+        </div>
+        <div class="Todos modelo ADIDAS">
+            <h2>masc/fem 145,99</h2>
+            <p>MODELOS INCRÍVEIS PARA TODOS OS GOSTOS</p>
+        </div>
+    </div>
+</main>
