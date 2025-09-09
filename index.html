@@ -41,16 +41,15 @@
     }
 
     #inicio img {
-      width: 250px; /* Maior tamanho para as imagens */
+      width: 250px; /* Tamanho maior para as imagens */
       height: auto;
       border-radius: 8px;
       margin: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para dar um efeito mais suave */
-      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    #inicio img:hover {
-      transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    #inicio {
+      text-align: center; /* Centraliza as imagens */
     }
 
     .marcas {
@@ -73,45 +72,50 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .contato-form {
-      max-width: 400px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .contato-form label {
-      font-weight: bold;
-      color: #800040;
-    }
-
-    .contato-form input,
-    .contato-form select,
-    .contato-form button {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .contato-form button {
-      background-color: #800040;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .contato-form button:hover {
-      background-color: #b3005e;
-    }
-
     footer {
       background-color: #ffe6ec;
       padding: 15px;
       font-size: 0.9em;
       color: #800040;
-      text-
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Locadora MB</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#calcados">Calçados</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Início</h2>
+      <p>Veja nossas opções disponíveis:</p>
+      <!-- Imagens com a classe para estilo -->
+      <img src="tenis-esportivo.jpg" alt="Tênis Esportivo MaxRun" />
+      <img src="bota-casual.jpg" alt="Bota Casual UrbanStyle" />
+      <img src="sandalia-feminina.jpg" alt="Sandália Feminina Confort" />
+    </section>
+
+    <section id="calcados">
+      <h2>Marcas disponíveis</h2>
+      <div class="marcas">
+        <div class="marca">Nike</div>
+        <div class="marca">Adidas</div>
+        <div class="marca">Puma</div>
+        <div class="marca">NB</div>
+        <div class="marca">Asics</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Locadora MB - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
