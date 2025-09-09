@@ -40,12 +40,12 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         margin-top: 20px;
     }
 
     .calcadosimg {
-        width: 200px;
+        width: 130px;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
