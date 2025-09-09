@@ -41,10 +41,16 @@
     }
 
     #inicio img {
-      width: 180px;
+      width: 250px; /* Maior tamanho para as imagens */
+      height: auto;
       border-radius: 8px;
       margin: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para dar um efeito mais suave */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #inicio img:hover {
+      transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
     }
 
     .marcas {
@@ -108,109 +114,4 @@
       padding: 15px;
       font-size: 0.9em;
       color: #800040;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Locadora MB</h1>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#calcados">Calçados</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio">
-      <h2>Início</h2>
-      <p>Veja nossas opções disponíveis:</p>
-      <img src="tenis-esportivo.jpg" alt="Tênis Esportivo MaxRun" />
-      <img src="bota-casual.jpg" alt="Bota Casual UrbanStyle" />
-      <img src="sandalia-feminina.jpg" alt="Sandália Feminina Confort" />
-    </section>
-
-    <section id="calcados">
-      <h2>Marcas disponíveis</h2>
-      <div class="marcas">
-        <div class="marca">Nike</div>
-        <div class="marca">Adidas</div>
-        <div class="marca">Puma</div>
-        <div class="marca">NB</div>
-        <div class="marca">Asics</div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <h2>Finalizar Pedido</h2>
-      <form class="contato-form">
-        <label for="nome">Nome completo:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-
-        <label for="telefone">Número de telefone:</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}">
-
-        <label for="marca">Marca do calçado:</label>
-        <select id="marca" name="marca" required>
-          <option value="">Selecione uma marca</option>
-          <option value="nike">Nike</option>
-          <option value="adidas">Adidas</option>
-          <option value="puma">Puma</option>
-          <option value="nb">NB</option>
-          <option value="asics">Asics</option>
-        </select>
-
-        <label for="numero">Número (tamanho):</label>
-        <select id="numero" name="numero" required>
-          <option value="">Selecione o tamanho</option>
-          <option value="34">34</option>
-          <option value="35">35</option>
-          <option value="36">36</option>
-          <option value="37">37</option>
-          <option value="38">38</option>
-          <option value="39">39</option>
-          <option value="40">40</option>
-          <option value="41">41</option>
-          <option value="42">42</option>
-          <option value="43">43</option>
-          <option value="44">44</option>
-        </select>
-
-        <label for="cor">Cor:</label>
-        <select id="cor" name="cor" required>
-          <option value="">Selecione a cor</option>
-          <option value="preto">Preto</option>
-          <option value="branco">Branco</option>
-          <option value="azul">Azul</option>
-          <option value="vermelho">Vermelho</option>
-          <option value="verde">Verde</option>
-          <option value="amarelo">Amarelo</option>
-        </select>
-
-        <label for="rua">Rua:</label>
-        <input type="text" id="rua" name="rua" placeholder="Rua" required>
-
-        <label for="numero-endereco">Número:</label>
-        <input type="text" id="numero-endereco" name="numero-endereco" placeholder="Número" required>
-
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
-
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
-
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" placeholder="Estado" maxlength="2" required>
-
-        <button type="submit">Enviar Pedido</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Locadora MB - Todos os direitos reservados</p>
-  </footer>
-</body>
-</html>
+      text-
