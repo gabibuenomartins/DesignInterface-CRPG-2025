@@ -150,7 +150,7 @@
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
         <label for="telefone">Número de telefone:</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}">
 
         <label for="marca">Marca do calçado:</label>
         <select id="marca" name="marca" required>
@@ -192,4 +192,25 @@
         <label for="rua">Rua:</label>
         <input type="text" id="rua" name="rua" placeholder="Rua" required>
 
-        <label for="numero-endereco">
+        <label for="numero-endereco">Número:</label>
+        <input type="text" id="numero-endereco" name="numero-endereco" placeholder="Número" required>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" placeholder="Estado" maxlength="2" required>
+
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Locadora MB - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
