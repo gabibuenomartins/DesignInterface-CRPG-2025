@@ -1,39 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Venda de calçados</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>MB - Finalizar Pedido</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        background-color: #004080;
+        color: white;
+        padding: 20px;
+    }
+
+    header nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #f1f1f1;
+        padding: 15px;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #333;
+    }
+
+    .calcados {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .calcadosimg {
+        width: 130px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>MB</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#calcados">Calçados</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <header>
-        <h2>Locadora IFPR</h2>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="#">Calçados</a>
-            <a href="#">Contato</a>
-        </nav>
-    </header>
+  <main>
+    <h2>Finalizar Pedido</h2>
+    <p>Preencha os dados abaixo para concluir sua compra:</p>
+<form class="contato-form">
+  <label for="nome">Nome completo:</label>
+  <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
-    <main>
-        <h1>Bem-vindo à MB calcados </h1>
-        <p>Encontre o calçado ideial para o seu dia, trabalho ou lazer.</p>
+  <label for="telefone">Número de telefone:</label>
+  <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}">
 
-        <div class="calcados">
-            <img src="https://images.tcdn.com.br/img/img_prod/1265199/nike_air_force_branco_trancado_premium_705_1_0083f463b5c1995c5e80f065cc0677b0.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&e=60" alt="tênis" />
-            <img src="https://img.olx.com.br/images/68/681577540609890.jpg" />
-            <img src="https://cdn.dooca.store/151820/products/whatsapp-image-2024-04-03-at-52655-pm.jpeg?v=1712176369" />
-        </div>
-    </main>
+  <label for="marca">Marca do calçado:</label>
+  <select id="marca" name="marca" required>
+    <option value="">Selecione uma marca</option>
+    <option value="maxrun">MaxRun</option>
+    <option value="urbanstyle">UrbanStyle</option>
+    <option value="confort">Confort</option>
+    <option value="colorfun">ColorFun</option>
+  </select>
 
-    <footer>
-        <p>&copy; 2025 Locadora IFPR - Todos os direitos reservados</p>
-    </footer>
+  <label for="numero">Número (tamanho):</label>
+  <select id="numero" name="numero" required>
+    <option value="">Selecione o tamanho</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+  </select>
 
-</body>
+  <label for="cor">Cor:</label>
+  <select id="cor" name="cor" required>
+    <option value="">Selecione a cor</option>
+    <option value="preto">Preto</option>
+    <option value="branco">Branco</option>
+    <option value="azul">Azul</option>
+    <option value="vermelho">Vermelho</option>
+    <option value="verde">Verde</option>
+    <option value="amarelo">Amarelo</option>
+  </select>
 
-</html>
+  <label for="rua">Rua:</label>
+  <input type="text" id="rua" name="rua" placeholder="Rua" required>
+
+  <label for="numero-endereco">Número:</label>
+  <input type="text" id="numero-endereco" name="numero-endereco" placeholder="Número" required>
+
+  <label for="bairro">Bairro:</label>
+  <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+
+  <label for="cidade">Cidade:</label>
+  <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+
+  <label for="estado">Estado:</label>
+  <input type="text" id="estado" name="estado" placeholder="Estado" maxlength="2" required>
+
+  <button type="submit">Enviar Pedido</button>
+</form>
