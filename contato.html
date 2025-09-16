@@ -1,77 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<form class="contato-form" action="action_contato.php" method="POST">
+  <label for="nome">Nome (text):</label>
+  <input type="text" id="nome" name="nome" required>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locadora IFPR - Contato</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <label for="email">E-mail (email):</label>
+  <input type="email" id="email" name="email" required>
 
-<body>
+  <label for="idade">Idade (number):</label>
+  <input type="number" id="idade" name="idade" min="1" max="120" required>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h2>Locadora IFPR</h2>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="filiais.html">Filiais</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
+  <label for="data">Data do contato (date):</label>
+  <input type="date" id="data" name="data" required>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <h1>Entre em Contato</h1>
-        <form class="contato-form">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Locadora IFPR - Todos os direitos reservados</p>
-    </footer>
-
-</body>
-
-</html><form class="contato-form" action="action_contato.php" method="POST">
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nome" required />
-
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="idade">Idade:</label>
-  <input type="number" id="idade" name="idade" min="1" max="120" />
-
-  <label for="data">Data do contato:</label>
-  <input type="date" id="data" name="data" />
-
-  <label>Sexo:</label>
-  <input type="radio" id="masc" name="sexo" value="Masculino" />
+  <label>Sexo (radio):</label>
+  <input type="radio" id="masc" name="sexo" value="Masculino" required>
   <label for="masc">Masculino</label>
-  <input type="radio" id="fem" name="sexo" value="Feminino" />
+  <input type="radio" id="fem" name="sexo" value="Feminino" required>
   <label for="fem">Feminino</label>
 
-  <label>Interesses:</label>
-  <input type="checkbox" id="esporte" name="interesses[]" value="Esporte" />
+  <label>Interesses (checkbox):</label>
+  <input type="checkbox" id="esporte" name="interesses[]" value="Esporte">
   <label for="esporte">Esporte</label>
-  <input type="checkbox" id="musica" name="interesses[]" value="Música" />
+  <input type="checkbox" id="musica" name="interesses[]" value="Música">
   <label for="musica">Música</label>
 
-  <label for="mensagem">Mensagem:</label>
-  <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+  <label for="mensagem">Mensagem (textarea):</label>
+  <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
   <button type="submit">Enviar</button>
 </form>
-
