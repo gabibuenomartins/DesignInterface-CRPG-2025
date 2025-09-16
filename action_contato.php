@@ -15,7 +15,7 @@
         <h2>Loja MB</h2>
         <nav>
             <a href="index.html">Início</a>
-            <a href="filiais.html">Filiais</a>
+            <a href="filiail.html">Filiais</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
