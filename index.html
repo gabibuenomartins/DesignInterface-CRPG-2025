@@ -109,3 +109,138 @@
 
     form.contato-form {
       background-color: #ffe6ec;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+
+    form input[type="radio"],
+    form input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #800040;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #a00050;
+    }
+
+    footer {
+      background-color: #ffe6ec;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #800040;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Loja MB</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#calcados">Calçados</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Início -->
+    <section id="inicio">
+      <h2>Início</h2>
+      <p>Confira alguns dos nossos modelos disponíveis:</p>
+      <div class="imagens-calcados">
+        <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas cinza e branco" />
+        <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force branco" />
+        <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla preto e branco" />
+      </div>
+
+      <h2>Marcas disponíveis</h2>
+      <div class="marcas">
+        <div class="marca">Nike</div>
+        <div class="marca">Adidas</div>
+        <div class="marca">Puma</div>
+        <div class="marca">NB</div>
+        <div class="marca">Asics</div>
+      </div>
+    </section>
+
+    <!-- Calçados -->
+    <section id="calcados">
+      <h2>Calçados</h2>
+      <p>Veja abaixo alguns dos nossos calçados disponíveis com numeração e valores:</p>
+      <div class="lista-calcados">
+        <div class="calcado">
+          <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas" />
+          <strong>Adidas Sport</strong>
+          Nº: 38-43<br>
+          R$ 299,90
+        </div>
+        <div class="calcado">
+          <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force" />
+          <strong>Nike Air Force</strong>
+          Nº: 36-44<br>
+          R$ 349,90
+        </div>
+        <div class="calcado">
+          <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla" />
+          <strong>Tesla Coil Delux</strong>
+          Nº: 37-42<br>
+          R$ 399,90
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <form class="contato-form" action="action_contato.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="1" max="120" required>
+
+        <label for="data">Data do contato:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label>Sexo:</label>
+        <input type="radio" id="masc" name="sexo" value="Masculino">
+        <label for="masc">Masculino</label>
+        <input type="radio" id="fem" name="sexo" value="Feminino">
+        <label for="fem">Feminino</label>
+
+        <label>Inter
+
+    form.contato-form {
+      background-color: #ffe6ec;
