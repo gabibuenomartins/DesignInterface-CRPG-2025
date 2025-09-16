@@ -2,84 +2,49 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Loja MB</title>
+  <title>Calçados - Loja MB</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f7c6c7, #f3a6b0); /* rose metálico */
-      color: #000; /* texto padrão preto */
+      background: linear-gradient(135deg, #f7c6c7, #f3a6b0);
+      color: #000;
     }
-
     header {
-      background-color: #800040; /* vinho escuro para contraste */
+      background-color: #800040;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     header nav a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
-
     header nav a:hover {
       text-decoration: underline;
     }
-
     main {
       padding: 20px;
       max-width: 900px;
       margin: 0 auto;
     }
-
-    section {
-      margin-bottom: 40px;
+    ul {
+      list-style: none;
+      padding: 0;
     }
-
-    #inicio {
-      text-align: center;
-    }
-
-    .imagens-calcados {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-
-    .imagens-calcados img {
-      width: 250px;
-      height: auto;
+    li {
+      background: #ffe6ec;
+      margin-bottom: 15px;
+      padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .marcas {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .marca {
-      background-color: #ffe6ec;
       border: 1px solid #f48fb1;
-      padding: 20px;
-      border-radius: 10px;
-      width: 140px;
-      text-align: center;
-      font-weight: bold;
       color: #800040;
+      font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     footer {
       background-color: #ffe6ec;
       padding: 15px;
@@ -94,31 +59,19 @@
   <header>
     <h1>Loja MB</h1>
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="#calcados">Calçados</a>
-      <a href="#contato">Contato</a>
+      <a href="index.html">Início</a>
+      <a href="calcados.html">Calçados</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
   <main>
-    <section id="inicio">
-      <h2>Início</h2>
-      <p>Confira alguns dos nossos modelos disponíveis:</p>
-      <div class="imagens-calcados">
-        <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Ousy 2195 Cinza" />
-        <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla Coil Delux Branco e Preto" />
-        <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-preto-2.jpg" alt="Tênis Ousy 2195 Preto" />
-      </div>
-
-      <h2>Marcas disponíveis</h2>
-      <div class="marcas">
-        <div class="marca">Nike</div>
-        <div class="marca">Adidas</div>
-        <div class="marca">Puma</div>
-        <div class="marca">NB</div>
-        <div class="marca">Asics</div>
-      </div>
-    </section>
+    <h2>Calçados disponíveis</h2>
+    <ul>
+      <li>Tênis Adidas cinza e branco</li>
+      <li>Nike Air Force branco</li>
+      <li>Tênis Prada preto e branco</li>
+    </ul>
   </main>
 
   <footer>
@@ -126,6 +79,3 @@
   </footer>
 </body>
 </html>
-
-
-
