@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -8,12 +8,12 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f7c6c7, #f3a6b0); /* rose metálico */
+      background: linear-gradient(135deg, #f7c6c7, #f3a6b0);
       color: #000;
     }
 
     header {
-      background-color: #800040; /* vinho escuro */
+      background-color: #800040;
       color: white;
       padding: 20px;
       text-align: center;
@@ -24,6 +24,7 @@
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
     header nav a:hover {
@@ -33,11 +34,19 @@
     main {
       padding: 20px;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
 
     section {
+      display: none; /* todas as seções começam escondidas */
       margin-bottom: 40px;
+    }
+
+    section.active {
+      display: block; /* só a seção ativa aparece */
+    }
+
+    #inicio {
       text-align: center;
     }
 
@@ -57,6 +66,83 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
+    /* Estilo para Calçados */
+    .produto {
+      display: flex;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #f48fb1;
+      align-items: center;
+    }
+
+    .produto img {
+      width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .detalhes {
+      flex-grow: 1;
+    }
+
+    .detalhes h3 {
+      margin: 0 0 10px 0;
+      color: #800040;
+    }
+
+    .detalhes p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .detalhes select {
+      padding: 6px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #f48fb1;
+      font-size: 1em;
+    }
+
+    /* Estilo para formulário de contato */
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #800040;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #f48fb1;
+      border-radius: 6px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #800040;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+
+    form button:hover {
+      background-color: #a00060;
+    }
+
+    /* Marcas */
     .marcas {
       display: flex;
       flex-wrap: wrap;
@@ -74,4 +160,33 @@
       text-align: center;
       font-weight: bold;
       color: #800040;
-      box-shadow: 0
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Loja MB</h1>
+    <nav>
+      <a href="#" data-target="inicio">Início</a>
+      <a href="#" data-target="calcados">Calçados</a>
+      <a href="#" data-target="contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INÍCIO -->
+    <section id="inicio" class="active">
+      <h2>Início</h2>
+      <p>Confira alguns dos nossos modelos disponíveis:</p>
+      <div class="imagens-calcados">
+        <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas cinza e branco" />
+        <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force branco" />
+        <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla Coil Deluxe" />
+      </div>
+
+      <h2>Marcas disponíveis</h2>
+      <div class="marcas">
+        <div class="marca">Nike</div>
+        <di
