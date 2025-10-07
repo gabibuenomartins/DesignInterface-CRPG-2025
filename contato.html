@@ -1,60 +1,12 @@
-<form class="contato-form" action="https://script.google.com/macros/s/AKfycbz1ORDHCkUo4t5Ii6tBe6-ZuBiXbCus8_1RxFAvwEe5ts4sb6c-xKziL8myUfL4oGMVbg/exec" method="POST">
-  <label for="nome">Nome (text):</label>
+<<form class="contato-form" action="https://script.google.com/macros/s/AKfycbz1ORDHCkUo4t5Ii6tBe6-ZuBiXbCus8_1RxFAvwEe5ts4sb6c-xKziL8myUfL4oGMVbg/exec" method="POST">
+  <label for="nome">Nome completo:</label>
   <input type="text" id="nome" name="nome" required>
 
-  <label for="email">E-mail (email):</label>
+  <label for="email">E-mail:</label>
   <input type="email" id="email" name="email" required>
 
-  <label for="idade">Idade (number):</label>
-  <input type="number" id="idade" name="idade" min="1" max="120" required>
-
-  <label for="data">Data do contato (date):</label>
-  <input type="date" id="data" name="data" required>
-
-  <label>Sexo (radio):</label>
-  <input type="radio" id="masc" name="sexo" value="Masculino" required>
-  <label for="masc">Masculino</label>
-  <input type="radio" id="fem" name="sexo" value="Feminino" required>
-  <label for="fem">Feminino</label>
-
-  <label>Interesses (checkbox):</label>
-  <input type="checkbox" id="esporte" name="interesses[]" value="Esporte">
-  <label for="esporte">Esporte</label>
-  <input type="checkbox" id="musica" name="interesses[]" value="Música">
-  <label for="musica">Música</label>
-
-  <label for="mensagem">Mensagem (textarea):</label>
+  <label for="mensagem">Comentário:</label>
   <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
   <button type="submit">Enviar</button>
 </form>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // URL do Apps Script
-    $url = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
-
-    // Dados do formulário
-    $data = [
-        "nome" => $_POST["nome"] ?? "",
-        "email" => $_POST["email"] ?? "",
-        "seu comentário" => $_POST["mensagem"] ?? ""
-        // Adicione outros campos conforme necessário
-    ];
-
-    // Inicializa cURL
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-    curl_close($ch);
-
-    echo "<p>Dados enviados para a planilha com sucesso!</p>";
-    echo "<pre>".htmlspecialchars($response)."</pre>";
-
-} else {
-    echo "<p>Nenhum dado foi enviado.</p>";
-}
-?>
