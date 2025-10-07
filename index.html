@@ -38,11 +38,11 @@
     }
 
     section {
-      display: none; /* Todas escondidas por padrão */
+      display: none; /* todas escondidas por padrão */
     }
 
     section.active {
-      display: block; /* Apenas a seção ativa aparece */
+      display: block; /* apenas a seção ativa é exibida */
     }
 
     .imagens-calcados {
@@ -198,7 +198,43 @@
     <section id="calcados">
       <h2>Calçados</h2>
       <p>Veja abaixo alguns dos nossos calçados disponíveis com numeração e valores:</p>
-      <div class="lista-ca
+      <div class="lista-calcados">
+        <div class="calcado">
+          <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas" />
+          <strong>Adidas Sport</strong>
+          Nº: 38-43<br>
+          R$ 299,90
+        </div>
+        <div class="calcado">
+          <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force" />
+          <strong>Nike Air Force</strong>
+          Nº: 36-44<br>
+          R$ 349,90
+        </div>
+        <div class="calcado">
+          <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla" />
+          <strong>Tesla Coil Delux</strong>
+          Nº: 37-42<br>
+          R$ 399,90
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <form class="contato-form" action="action_contato.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="1" max="120" required>
+
+        <label for="data">Data do contato:</label>
+        <input type="date" id
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -239,11 +275,11 @@
     }
 
     section {
-      display: none; /* Todas escondidas por padrão */
+      display: none; /* todas escondidas por padrão */
     }
 
     section.active {
-      display: block; /* Apenas a seção ativa aparece */
+      display: block; /* apenas a seção ativa é exibida */
     }
 
     .imagens-calcados {
@@ -399,4 +435,40 @@
     <section id="calcados">
       <h2>Calçados</h2>
       <p>Veja abaixo alguns dos nossos calçados disponíveis com numeração e valores:</p>
-      <div class="lista-ca
+      <div class="lista-calcados">
+        <div class="calcado">
+          <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas" />
+          <strong>Adidas Sport</strong>
+          Nº: 38-43<br>
+          R$ 299,90
+        </div>
+        <div class="calcado">
+          <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force" />
+          <strong>Nike Air Force</strong>
+          Nº: 36-44<br>
+          R$ 349,90
+        </div>
+        <div class="calcado">
+          <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla" />
+          <strong>Tesla Coil Delux</strong>
+          Nº: 37-42<br>
+          R$ 399,90
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <form class="contato-form" action="action_contato.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="1" max="120" required>
+
+        <label for="data">Data do contato:</label>
+        <input type="date" id
