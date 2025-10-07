@@ -42,7 +42,7 @@
     }
 
     section.active {
-      display: block; /* apenas a seção ativa é exibida */
+      display: block; /* apenas a seção ativa aparece */
     }
 
     .imagens-calcados {
@@ -234,7 +234,17 @@
         <input type="number" id="idade" name="idade" min="1" max="120" required>
 
         <label for="data">Data do contato:</label>
-        <input type="date" id
+        <input type="date" id="data" name="data" required>
+
+        <label>Sexo:</label>
+        <input type="radio" id="masc" name="sexo" value="Masculino">
+        <label for="masc">Masculino</label>
+        <input type="radio" id="fem" name="sexo" value="Feminino">
+        <label for="fem">Feminino</label>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -279,7 +289,7 @@
     }
 
     section.active {
-      display: block; /* apenas a seção ativa é exibida */
+      display: block; /* apenas a seção ativa aparece */
     }
 
     .imagens-calcados {
@@ -471,4 +481,14 @@
         <input type="number" id="idade" name="idade" min="1" max="120" required>
 
         <label for="data">Data do contato:</label>
-        <input type="date" id
+        <input type="date" id="data" name="data" required>
+
+        <label>Sexo:</label>
+        <input type="radio" id="masc" name="sexo" value="Masculino">
+        <label for="masc">Masculino</label>
+        <input type="radio" id="fem" name="sexo" value="Feminino">
+        <label for="fem">Feminino</label>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
