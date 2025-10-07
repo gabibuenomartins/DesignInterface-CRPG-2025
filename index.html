@@ -1,16 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loja MB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f7c6c7, #f3a6b0);
+      color: #000;
+    }
+
+    header {
+      background-color: #800040;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section {
+      display: none; /* Todas escondidas por padrão */
+    }
+
+    section.active {
+      display: block; /* Apenas a seção ativa aparece */
+    }
+
+    .imagens-calcados {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .imagens-calcados img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .marcas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .marca {
+      background-color: #ffe6ec;
+      border: 1px solid #f48fb1;
+      padding: 20px;
+      border-radius: 10px;
+      width: 140px;
+      text-align: center;
+      font-weight: bold;
+      color: #800040;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .lista-calcados {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .calcado {
+      background-color: #fff0f5;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .calcado img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .calcado strong {
+      display: block;
+      margin-top: 10px;
+      color: #800040;
+    }
+
+    form.contato-form {
+      background-color: #ffe6ec;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+
+    form input[type="radio"],
+    form input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #800040;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #a00050;
+    }
+
+    footer {
+      background-color: #ffe6ec;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #800040;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
+
   <header>
     <h1>Loja MB</h1>
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="#calcados">Calçados</a>
-      <a href="#contato">Contato</a>
+      <a onclick="mostrarSecao('inicio')">Início</a>
+      <a onclick="mostrarSecao('calcados')">Calçados</a>
+      <a onclick="mostrarSecao('contato')">Contato</a>
     </nav>
   </header>
 
   <main>
-    <!-- Seção: Início -->
-    <section id="inicio">
+    <!-- Início -->
+    <section id="inicio" class="active">
       <h2>Início</h2>
       <p>Confira alguns dos nossos modelos disponíveis:</p>
       <div class="imagens-calcados">
@@ -29,89 +194,189 @@
       </div>
     </section>
 
-    <!-- Seção: Calçados -->
+    <!-- Calçados -->
     <section id="calcados">
       <h2>Calçados</h2>
       <p>Veja abaixo alguns dos nossos calçados disponíveis com numeração e valores:</p>
-      <div class="lista-calcados">
-        <div class="calcado">
-          <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas" />
-          <strong>Adidas Sport</strong>
-          Nº: 38-43<br>
-          R$ 299,90
-        </div>
-        <div class="calcado">
-          <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force" />
-          <strong>Nike Air Force</strong>
-          Nº: 36-44<br>
-          R$ 349,90
-        </div>
-        <div class="calcado">
-          <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla" />
-          <strong>Tesla Coil Delux</strong>
-          Nº: 37-42<br>
-          R$ 399,90
-        </div>
-      </div>
-    </section>
+      <div class="lista-ca
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loja MB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f7c6c7, #f3a6b0);
+      color: #000;
+    }
 
-    <!-- Seção: Contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <form class="contato-form" action="action_contato.php" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+    header {
+      background-color: #800040;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+    header nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" min="1" max="120" required>
+    header nav a:hover {
+      text-decoration: underline;
+    }
 
-        <label for="data">Data do contato:</label>
-        <input type="date" id="data" name="data" required>
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-        <label>Sexo:</label>
-        <input type="radio" id="masc" name="sexo" value="Masculino">
-        <label for="masc">Masculino</label>
-        <input type="radio" id="fem" name="sexo" value="Feminino">
-        <label for="fem">Feminino</label>
+    section {
+      display: none; /* Todas escondidas por padrão */
+    }
 
-        <label>Interesses:</label>
-        <input type="checkbox" id="calcadosMasculinos" name="interesses[]" value="Calçados Masculinos">
-        <label for="calcadosMasculinos">Calçados Masculinos</label><br>
+    section.active {
+      display: block; /* Apenas a seção ativa aparece */
+    }
 
-        <input type="checkbox" id="calcadosFemininos" name="interesses[]" value="Calçados Femininos">
-        <label for="calcadosFemininos">Calçados Femininos</label><br>
+    .imagens-calcados {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        <input type="checkbox" id="promocoes" name="interesses[]" value="Promoções">
-        <label for="promocoes">Promoções</label><br>
+    .imagens-calcados img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    .marcas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+    .marca {
+      background-color: #ffe6ec;
+      border: 1px solid #f48fb1;
+      padding: 20px;
+      border-radius: 10px;
+      width: 140px;
+      text-align: center;
+      font-weight: bold;
+      color: #800040;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
 
-  <footer>
-    &copy; 2025 Loja MB. Todos os direitos reservados.
-  </footer>
-</body>
+    .lista-calcados {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .calcado {
+      background-color: #fff0f5;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .calcado img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .calcado strong {
+      display: block;
+      margin-top: 10px;
+      color: #800040;
+    }
+
+    form.contato-form {
+      background-color: #ffe6ec;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+
+    form input[type="radio"],
+    form input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #800040;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #a00050;
+    }
+
+    footer {
+      background-color: #ffe6ec;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #800040;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
+
   <header>
     <h1>Loja MB</h1>
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="#calcados">Calçados</a>
-      <a href="#contato">Contato</a>
+      <a onclick="mostrarSecao('inicio')">Início</a>
+      <a onclick="mostrarSecao('calcados')">Calçados</a>
+      <a onclick="mostrarSecao('contato')">Contato</a>
     </nav>
   </header>
 
   <main>
-    <!-- Seção: Início -->
-    <section id="inicio">
+    <!-- Início -->
+    <section id="inicio" class="active">
       <h2>Início</h2>
       <p>Confira alguns dos nossos modelos disponíveis:</p>
       <div class="imagens-calcados">
@@ -130,74 +395,8 @@
       </div>
     </section>
 
-    <!-- Seção: Calçados -->
+    <!-- Calçados -->
     <section id="calcados">
       <h2>Calçados</h2>
       <p>Veja abaixo alguns dos nossos calçados disponíveis com numeração e valores:</p>
-      <div class="lista-calcados">
-        <div class="calcado">
-          <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/ousyshoe/catalog/produtos/2195/2195-cinza-2.jpg" alt="Tênis Adidas" />
-          <strong>Adidas Sport</strong>
-          Nº: 38-43<br>
-          R$ 299,90
-        </div>
-        <div class="calcado">
-          <img src="https://daumupstore.com/1337-home_default/air-force-premium-cadarco-corda-.jpg" alt="Nike Air Force" />
-          <strong>Nike Air Force</strong>
-          Nº: 36-44<br>
-          R$ 349,90
-        </div>
-        <div class="calcado">
-          <img src="https://images.tcdn.com.br/img/img_prod/703344/tenis_tesla_coil_delux_b_eamp_w_9156_1_2be0f277beb3d337b16cfefec3f12274.jpg" alt="Tênis Tesla" />
-          <strong>Tesla Coil Delux</strong>
-          Nº: 37-42<br>
-          R$ 399,90
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção: Contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <form class="contato-form" action="action_contato.php" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" min="1" max="120" required>
-
-        <label for="data">Data do contato:</label>
-        <input type="date" id="data" name="data" required>
-
-        <label>Sexo:</label>
-        <input type="radio" id="masc" name="sexo" value="Masculino">
-        <label for="masc">Masculino</label>
-        <input type="radio" id="fem" name="sexo" value="Feminino">
-        <label for="fem">Feminino</label>
-
-        <label>Interesses:</label>
-        <input type="checkbox" id="calcadosMasculinos" name="interesses[]" value="Calçados Masculinos">
-        <label for="calcadosMasculinos">Calçados Masculinos</label><br>
-
-        <input type="checkbox" id="calcadosFemininos" name="interesses[]" value="Calçados Femininos">
-        <label for="calcadosFemininos">Calçados Femininos</label><br>
-
-        <input type="checkbox" id="promocoes" name="interesses[]" value="Promoções">
-        <label for="promocoes">Promoções</label><br>
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Loja MB. Todos os direitos reservados.
-  </footer>
-</body>
-      
+      <div class="lista-ca
