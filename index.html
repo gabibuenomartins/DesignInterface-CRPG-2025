@@ -4,36 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-</title>
+    <title>MB Calçados</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    
     <header>
-        <h2>Modelos de Provas</h2>
+        <h2>MB Calçados</h2>
         <nav>
-            <a href="index.html">Modelos</a>
-            <a href="filiais.html">Tipos</a>
+            <a href="index.html">Início</a>
+            <a href="filiais.html">Categorias</a>
             <a href="contato.html">Contato</a>
-            <a href="planilha.html">Planilha</a>
+            <a href="planilha.html">Estoque</a>
         </nav>
     </header>
 
     <main>
-  <h1>Bem-vindo ao Site de Modelo de Provas</h1>
-  <p>Encontre uma prova pronta para usar de facil acesso e com gabarito.</p>
+  <h1>Bem-vindo à MB Calçados</h1>
+  <p>Encontre tênis e calçados de qualidade, conforto e estilo.</p>
 
   <div id="conteudo" class="conteudo-scroll">
-    <p>Carregando conteúdo...</p>
+    <p>Carregando produtos...</p>
   </div>
 </main>
-        <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJ4-2DojRiVQVnVMoMRiFdXB9Rgj1UTIM7A-uFTotiMiMOyCuw1sghPmegbVMRevR6JA/exec"; // substitua pela URL do seu Apps Script
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJ4-2DojRiVQVnVMoMRiFdXB9Rgj1UTIM7A-uFTotiMiMOyCuw1sghPmegbVMRevR6JA/exec";
 
 async function carregarConteudo() {
   const container = document.getElementById('conteudo');
-  container.innerHTML = "<p>Carregando conteúdo...</p>";
+  container.innerHTML = "<p>Carregando produtos...</p>";
 
   try {
     const res = await fetch(SCRIPT_URL);
@@ -45,11 +46,11 @@ async function carregarConteudo() {
       bloco.className = 'bloco-item';
 
       const titulo = document.createElement('h2');
-      titulo.textContent = item.Título || '';
+      titulo.textContent = item.Título || 'Produto';
       bloco.appendChild(titulo);
 
       const descricao = document.createElement('p');
-      descricao.textContent = item.Descrição || '';
+      descricao.textContent = item.Descrição || 'Calçado disponível.';
       bloco.appendChild(descricao);
 
       if (item.Url && item.Url.startsWith('http')) {
@@ -70,14 +71,14 @@ async function carregarConteudo() {
 
     const img = document.createElement('img');
     img.src = "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f";
-    img.alt = "Tênis";
+    img.alt = "Tênis MB Calçados";
     bloco.appendChild(img);
-  
+
   }
   else {
     const link = document.createElement('a');
     link.href = item.Url;
-    link.textContent = 'Ver mais';
+    link.textContent = 'Ver detalhes';
     bloco.appendChild(link);
   }
 }
@@ -93,9 +94,9 @@ carregarConteudo();
 </script>
 
     </main>
-    
+
     <footer>
-        <p>&copy;Use com Sabedoria</p>
+        <p>&copy; MB Calçados</p>
     </footer>
 
 </body>
