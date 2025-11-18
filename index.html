@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelos de Provas</title>
+    <title>-</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <h2>Modelos de Provas</h2>
         <nav>
@@ -21,7 +20,6 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal -->
     <main>
   <h1>Bem-vindo ao Site de Modelo de Provas</h1>
   <p>Encontre uma prova pronta para usar de facil acesso e com gabarito.</p>
@@ -32,6 +30,7 @@
 </main>
         <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJ4-2DojRiVQVnVMoMRiFdXB9Rgj1UTIM7A-uFTotiMiMOyCuw1sghPmegbVMRevR6JA/exec"; // substitua pela URL do seu Apps Script
+
 async function carregarConteudo() {
   const container = document.getElementById('conteudo');
   container.innerHTML = "<p>Carregando conteúdo...</p>";
@@ -68,10 +67,12 @@ async function carregarConteudo() {
     bloco.appendChild(iframe);
   }
   else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
+
     const img = document.createElement('img');
-    img.src = item.Url;
-    img.alt = item.Título || 'Imagem';
+    img.src = "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f";
+    img.alt = "Tênis";
     bloco.appendChild(img);
+  
   }
   else {
     const link = document.createElement('a');
@@ -80,8 +81,6 @@ async function carregarConteudo() {
     bloco.appendChild(link);
   }
 }
-
-        
 
       container.appendChild(bloco);
     });
@@ -94,8 +93,7 @@ carregarConteudo();
 </script>
 
     </main>
-
-    <!-- Rodapé -->
+    
     <footer>
         <p>&copy;Use com Sabedoria</p>
     </footer>
