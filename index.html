@@ -20,7 +20,7 @@
     </nav>
 </header>
 
-<main>
+main>
     <h1>Bem-vindo à MB Calçados</h1>
     <p>Encontre tênis e calçados com conforto, estilo e preço justo.</p>
 
@@ -46,11 +46,11 @@ async function carregarConteudo() {
             bloco.className = 'bloco-item';
 
             const titulo = document.createElement('h2');
-            titulo.textContent = item.Título || 'Produto';
+            titulo.textContent = item.Título || 'Tênis disponível';
             bloco.appendChild(titulo);
 
             const descricao = document.createElement('p');
-            descricao.textContent = item.Descrição || 'Calçado disponível.';
+            descricao.textContent = item.Descrição || 'Modelo de tênis disponível em nosso catálogo.';
             bloco.appendChild(descricao);
 
             if (item.Url && item.Url.startsWith('http')) {
@@ -68,7 +68,12 @@ async function carregarConteudo() {
                 }
                 else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
                     const img = document.createElement('img');
-                    img.src = "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f";
+                
+                    img.src = item.Url;
+                    img.onerror = () => {
+                        img.src = "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f";
+                    };
+
                     img.alt = "Tênis MB Calçados";
                     bloco.appendChild(img);
                 }
