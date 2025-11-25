@@ -20,7 +20,7 @@
     </nav>
 </header>
 
-main>
+<main>
     <h1>Bem-vindo à MB Calçados</h1>
     <p>Encontre tênis e calçados com conforto, estilo e preço justo.</p>
 
@@ -31,6 +31,14 @@ main>
 
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJ4-2DojRiVQVnVMoMRiFdXB9Rgj1UTIM7A-uFTotiMiMOyCuw1sghPmegbVMRevR6JA/exec";
+
+const tenisFotos = [
+    "https://images.unsplash.com/photo-1528701800489-20be0b2f81ee",
+    "https://images.unsplash.com/photo-1606813906428-e5233ffcd1d3",
+    "https://images.unsplash.com/photo-1542296332-2e4473faf563",
+    "https://images.unsplash.com/photo-1600180758895-1c1a99c37e4a",
+    "https://images.unsplash.com/photo-1530460944061-8fcd61f52c30"
+];
 
 async function carregarConteudo() {
     const container = document.getElementById('conteudo');
@@ -68,10 +76,10 @@ async function carregarConteudo() {
                 }
                 else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
                     const img = document.createElement('img');
-                
                     img.src = item.Url;
+
                     img.onerror = () => {
-                        img.src = "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f";
+                        img.src = tenisFotos[Math.floor(Math.random() * tenisFotos.length)];
                     };
 
                     img.alt = "Tênis MB Calçados";
