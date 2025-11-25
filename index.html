@@ -32,6 +32,7 @@
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJ4-2DojRiVQVnVMoMRiFdXB9Rgj1UTIM7A-uFTotiMiMOyCuw1sghPmegbVMRevR6JA/exec";
 
+
 const tenisFotos = [
     "https://images.unsplash.com/photo-1528701800489-20be0b2f81ee",
     "https://images.unsplash.com/photo-1606813906428-e5233ffcd1d3",
@@ -61,37 +62,10 @@ async function carregarConteudo() {
             descricao.textContent = item.Descrição || 'Modelo de tênis disponível em nosso catálogo.';
             bloco.appendChild(descricao);
 
-            if (item.Url && item.Url.startsWith('http')) {
-                const youtubeRegex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
-                const match = item.Url.match(youtubeRegex);
-
-                if (match) {
-                    const iframe = document.createElement('iframe');
-                    iframe.src = `https://www.youtube.com/embed/${match[1]}`;
-                    iframe.width = "75%";
-                    iframe.height = "315";
-                    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                    iframe.setAttribute("allowfullscreen", true);
-                    bloco.appendChild(iframe);
-                }
-                else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
-                    const img = document.createElement('img');
-                    img.src = item.Url;
-
-                    img.onerror = () => {
-                        img.src = tenisFotos[Math.floor(Math.random() * tenisFotos.length)];
-                    };
-
-                    img.alt = "Tênis MB Calçados";
-                    bloco.appendChild(img);
-                }
-                else {
-                    const link = document.createElement('a');
-                    link.href = item.Url;
-                    link.textContent = 'Ver detalhes';
-                    bloco.appendChild(link);
-                }
-            }
+            const img = document.createElement('img');
+            img.src = tenisFotos[Math.floor(Math.random() * tenisFotos.length)];
+            img.alt = "Tênis MB Calçados";
+            bloco.appendChild(img);
 
             container.appendChild(bloco);
         });
