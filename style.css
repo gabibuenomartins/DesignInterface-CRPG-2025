@@ -11,18 +11,24 @@ header {
     padding: 20px;
 }
 
+
 header nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
 }
 
+header h2 {
+    color: yellow;
+}
+
 main {
     padding: 20px;
+     background-color: #ADD8E6FF;
 }
 
 footer {
-    background-color: #f1f1f1;
+    background-color: #00ffff;
     padding: 15px;
     margin-top: 30px;
 }
@@ -41,6 +47,44 @@ footer {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+.contato-form {
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contato-form label {
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato-form button {
+    background: #0d47a1;
+    color: #00a8ff00;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato-form button:hover {
+    background: #1976d2;
+}
 .contato-form {
     max-width: 400px;
     margin: 20px auto;
@@ -76,51 +120,49 @@ footer {
     transition: background 0.3s;
 }
 
+
 .contato-form button:hover {
     background: #1976d2;
 }
-
 .table-wrap {
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 0 12px 24px;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0 12px 24px;
 }
 
 .dados-planilha {
-    width: 100%;
-    border-collapse: collapse;
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .dados-planilha th {
-    background: linear-gradient(90deg, #0d47a1, #1976d2);
-    color: #fff;
-    text-align: left;
-    padding: 10px;
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: #fff;
+  text-align: left;
+  padding: 10px;
 }
 
 .dados-planilha td {
-    padding: 8px 10px;
-    border-bottom: 1px solid #ddd;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .dados-planilha tr:nth-child(even) {
-    background: #f9f9f9;
+  background: #f9f9f9;
 }
 
 .dados-planilha tr:hover {
-    background: #e3f2fd;
+  background: #e3f2fd;
 }
 
 .info-msg {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
-
-/* Conteúdo com scroll (já existente) */
 .conteudo-scroll {
   max-height: 500px;
   overflow-y: auto;
@@ -130,32 +172,21 @@ footer {
   background: #fff;
 }
 
-/* Blocos de conteúdo */
 .bloco-item {
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid #eee;
-  text-align: center;            /* centraliza títulos/descrição/elementos inline */
+  text-align: center;
 }
 
-/* Imagem: centralizada e responsiva */
 .bloco-item img {
-    display: block;
-    margin: 12px auto;
-    max-width: 400px;   /* largura máxima controlada */
-    width: 100%;        /* ocupa até 100% do espaço permitido */
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-  
-
-/* Ajustes para telas muito pequenas */
-@media (max-width: 420px) {
-  .bloco-item img {
-    width: 100%;
-    margin: 10px 0;
-  }
+  display: block;
+  margin: 12px auto;
+  max-width: 400px;   /* mantém o tamanho controlado */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .bloco-item h2 {
@@ -165,5 +196,63 @@ footer {
 
 .bloco-item p {
   margin: 6px 0;
-  text-align: center; /* descrição alinhada à esquerda para leitura; remova se preferir centralizar tudo */
+}
+/* ---------- Botão Toggle ---------- */
+.tema-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 50px;
+  height: 26px;
+  background: #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  transition: background 0.25s;
+}
+
+.tema-toggle .bolinha {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+/* ---------- TEMA ESCURO ---------- */
+.tema-escuro {
+  background-color: #0f1720;
+  color: #e9eef5;
+}
+
+.tema-escuro header {
+  background-color: #0b1220;
+}
+
+.tema-escuro footer {
+  background-color: #0b1220;
+  color: #e9eef5;
+}
+
+.tema-escuro .conteudo-scroll {
+  background: #111821;
+  border-color: #2a3645;
+}
+
+.tema-escuro .bloco-item {
+  border-color: #2a3645;
+}
+
+.tema-escuro .bloco-item h2 {
+  color: #8db0ff;
+}
+
+/* Toggle no modo escuro */
+.tema-escuro .tema-toggle {
+  background: #374151;
+}
+
+.tema-escuro .tema-toggle .bolinha {
+  transform: translateX(24px);
 }
