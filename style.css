@@ -6,11 +6,10 @@ body {
 }
 
 header {
-    background-color: #004080;
+    background-color: #6a0dad; /* roxo */
     color: white;
     padding: 20px;
 }
-
 
 header nav a {
     color: white;
@@ -19,16 +18,16 @@ header nav a {
 }
 
 header h2 {
-    color: yellow;
+    color: #e3b7ff; /* lilás */
 }
 
 main {
     padding: 20px;
-     background-color: #ADD8E6FF;
+    background-color: #f2d9ff; /* lilás bem claro */
 }
 
 footer {
-    background-color: #00ffff;
+    background-color: #d1a3ff; /* lilás */
     padding: 15px;
     margin-top: 30px;
 }
@@ -58,13 +57,13 @@ footer {
 
 .contato-form label {
     font-weight: bold;
-    color: #00ffff;
+    color: #d1a3ff; /* lilás */
 }
 
 .contato-form input,
 .contato-form textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #b87fff; /* lilás forte */
     border-radius: 6px;
     font-size: 1em;
     width: 100%;
@@ -72,8 +71,8 @@ footer {
 }
 
 .contato-form button {
-    background: #0d47a1;
-    color: #00a8ff00;
+    background: #6a0dad; /* roxo */
+    color: white;
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -83,8 +82,9 @@ footer {
 }
 
 .contato-form button:hover {
-    background: #1976d2;
+    background: #8a2be2; /* roxo claro */
 }
+
 .contato-form {
     max-width: 400px;
     margin: 20px auto;
@@ -96,13 +96,13 @@ footer {
 
 .contato-form label {
     font-weight: bold;
-    color: #0d47a1;
+    color: #6a0dad;
 }
 
 .contato-form input,
 .contato-form textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #b87fff;
     border-radius: 6px;
     font-size: 1em;
     width: 100%;
@@ -110,7 +110,7 @@ footer {
 }
 
 .contato-form button {
-    background: #0d47a1;
+    background: #6a0dad;
     color: white;
     padding: 10px;
     border: none;
@@ -120,10 +120,10 @@ footer {
     transition: background 0.3s;
 }
 
-
 .contato-form button:hover {
-    background: #1976d2;
+    background: #8a2be2;
 }
+
 .table-wrap {
   max-width: 100%;
   overflow-x: auto;
@@ -140,7 +140,7 @@ footer {
 }
 
 .dados-planilha th {
-  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  background: linear-gradient(90deg, #6a0dad, #8a2be2);
   color: #fff;
   text-align: left;
   padding: 10px;
@@ -152,22 +152,23 @@ footer {
 }
 
 .dados-planilha tr:nth-child(even) {
-  background: #f9f9f9;
+  background: #f9eaff; /* lilás clarinho */
 }
 
 .dados-planilha tr:hover {
-  background: #e3f2fd;
+  background: #efd4ff;
 }
 
 .info-msg {
   text-align: center;
   padding: 10px;
 }
+
 .conteudo-scroll {
   max-height: 500px;
   overflow-y: auto;
   padding: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #cfa8ff;
   border-radius: 8px;
   background: #fff;
 }
@@ -175,14 +176,14 @@ footer {
 .bloco-item {
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ecd5ff;
   text-align: center;
 }
 
 .bloco-item img {
   display: block;
   margin: 12px auto;
-  max-width: 400px;   /* mantém o tamanho controlado */
+  max-width: 400px;
   width: 100%;
   height: auto;
   border-radius: 6px;
@@ -190,13 +191,14 @@ footer {
 }
 
 .bloco-item h2 {
-  color: #0d47a1;
+  color: #6a0dad;
   margin-bottom: 6px;
 }
 
 .bloco-item p {
   margin: 6px 0;
 }
+
 /* ---------- Botão Toggle ---------- */
 .tema-toggle {
   position: absolute;
@@ -204,7 +206,7 @@ footer {
   right: 20px;
   width: 50px;
   height: 26px;
-  background: #ddd;
+  background: #d8b6ff;
   border-radius: 20px;
   cursor: pointer;
   padding: 3px;
@@ -220,51 +222,51 @@ footer {
   border-radius: 50%;
   transition: transform 0.25s;
 }
+
 /* ---------- TEMA ESCURO ---------- */
 .tema-escuro {
-  background-color: #0f1720;
-  color: #e9eef5;
+  background-color: #1a1124;
+  color: #f4e9ff;
 }
 
 .tema-escuro header {
-  background-color: #0b1220;
+  background-color: #150d1f;
 }
 
 .tema-escuro footer {
-  background-color: #0b1220;
-  color: #e9eef5;
+  background-color: #150d1f;
+  color: #f4e9ff;
 }
 
 .tema-escuro .conteudo-scroll {
-  background: #111821;
-  border-color: #2a3645;
+  background: #1f162d;
+  border-color: #4a3d63;
 }
 
 .tema-escuro .bloco-item {
-  border-color: #2a3645;
+  border-color: #4a3d63;
 }
 
 .tema-escuro .bloco-item h2 {
-  color: #8db0ff;
+  color: #d7b3ff;
 }
 
-/* Toggle no modo escuro */
 .tema-escuro .tema-toggle {
-  background: #374151;
+  background: #5f4b87;
 }
 
 .tema-escuro .tema-toggle .bolinha {
   transform: translateX(24px);
 }
 
-/* ---------- Botão Toggle ---------- */
+/* ---------- Botão Toggle DUPLICADO (mantido) ---------- */
 .tema-toggle {
   position: absolute;
   top: 15px;
   right: 20px;
   width: 50px;
   height: 26px;
-  background: #ddd;
+  background: #d8b6ff;
   border-radius: 20px;
   cursor: pointer;
   padding: 3px;
@@ -281,37 +283,36 @@ footer {
   transition: transform 0.25s;
 }
 
-/* ---------- TEMA ESCURO ---------- */
+/* ---------- TEMA ESCURO DUPLICADO (mantido) ---------- */
 .tema-escuro {
-  background-color: #0f1720;
-  color: #e9eef5;
+  background-color: #1a1124;
+  color: #f4e9ff;
 }
 
 .tema-escuro header {
-  background-color: #0b1220;
+  background-color: #150d1f;
 }
 
 .tema-escuro footer {
-  background-color: #0b1220;
-  color: #e9eef5;
+  background-color: #150d1f;
+  color: #f4e9ff;
 }
 
 .tema-escuro .conteudo-scroll {
-  background: #111821;
-  border-color: #2a3645;
+  background: #1f162d;
+  border-color: #4a3d63;
 }
 
 .tema-escuro .bloco-item {
-  border-color: #2a3645;
+  border-color: #4a3d63;
 }
 
 .tema-escuro .bloco-item h2 {
-  color: #8db0ff;
+  color: #d7b3ff;
 }
 
-/* Toggle no modo escuro */
 .tema-escuro .tema-toggle {
-  background: #374151;
+  background: #5f4b87;
 }
 
 .tema-escuro .tema-toggle .bolinha {
