@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locadora IFPR - Resultado do Formulário</title>
+    <title>Loja MB - Resultado do Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,8 +15,8 @@
         <h2>Locadora IFPR</h2>
         <nav>
             <a href="index.html">Início</a>
-            <a href="carros.html">Carros</a>
-            <a href="filiais.html">Filiais</a>
+            <a href="carros.html">Têniss</a>
+            <a href="filiais.html">Lojas</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
@@ -49,7 +49,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Locadora IFPR - Todos os direitos reservados</p>
+        <p>&copy; 2025 Loja MB - Todos os direitos reservados</p>
     </footer>
 
 </body>
